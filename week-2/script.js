@@ -24,8 +24,7 @@ const addMovieDialog = document.getElementById('add-movie-dialog');
 
 movies.forEach(movie => {
     const movieCard = document.createElement('div');
-    movieCard.classList.add('movie-card',
-        'w-48', 'm-2', 'p-2', 'bg-white', 'rounded-md',
+    movieCard.classList.add('w-48', 'm-2', 'p-2', 'bg-white', 'rounded-md',
         'shadow-md', 'cursor-pointer', 'transition-transform', 'transform', 'hover:scale-105');
     movieCard.innerHTML = `
                 <img src="${movie.image}" alt="${movie.title}"  class="max-w-full h-auto" >

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans bg-gray-900 m-0 p-0">
+
+    <header class="bg-gray-800 text-white p-4 text-center text-2xl">
+        <h1>My Movies</h1>
+    </header>
+
+    <div id="movie-list" class="flex flex-wrap justify-around p-5"></div>
+
+    <div id="movie-description"
+        class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 bg-white rounded-md shadow-lg z-50">
+        <span id="close-btn" class="absolute top-2 right-2 cursor-pointer" onclick="closeMovieDescription()">X</span>
+        <h2 id="movie-title" class="font-bold text-xl"></h2>
+        <p id="movie-summary"></p>
+    </div>
+
+    <div id="fab"
+        class="fixed bottom-5 right-5 w-10 h-10 bg-blue-500 text-white rounded-full text-xl text-center leading-12 cursor-pointer shadow-md transition duration-300 hover:bg-blue-800"
+        onclick="openAddMovieDialog()">+</div>
+
+
+    <div id="add-movie-dialog"
+        class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 bg-white rounded-md shadow-lg z-50">
+        <span id="close-add-movie-dialog" class="absolute top-2 right-2 cursor-pointer"
+            onclick="closeAddMovieDialog()">X</span>
+        <label for="new-movie-title" class="block mb-1">Title:</label>
+        <input type="text" class="w-full border-solid border-2 border-blue-500 p-2 mb-2 box-border"
+            id="new-movie-title">
+        <label for="new-movie-image" class="block mb-1">Image:</label>
+        <textarea id="new-movie-image"
+            class="w-full p-2 mb-2 box-border border-solid border-2 border-blue-500"></textarea>
+        <button onclick="addNewMovie()"
+            class="bg-blue-500 hover:bg-blue-800 text-white p-2 rounded-md cursor-pointer">Add Movie</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
